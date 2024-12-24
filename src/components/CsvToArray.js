@@ -34,11 +34,6 @@ const CsvToArray = () => {
 
   return (
     <div>
-      <h2>Upload CSV File</h2>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <button onClick={() => onSubmit(data)}>Submit</button>
-      </div>
-
       <div className="flex items-center justify-center w-full">
         <div
           {...getRootProps()}
@@ -46,27 +41,30 @@ const CsvToArray = () => {
         >
           <div className="flex flex-col items-center justify-center pt-5 pb-6">
             <svg
-              className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+              class="w-6 h-6 text-gray-800 dark:text-white"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
               fill="none"
-              viewBox="0 0 20 16"
+              viewBox="0 0 24 24"
             >
               <path
                 stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M18 9V4a1 1 0 0 0-1-1H8.914a1 1 0 0 0-.707.293L4.293 7.207A1 1 0 0 0 4 7.914V20a1 1 0 0 0 1 1h4M9 3v4a1 1 0 0 1-1 1H4m11 6v4m-2-2h4m3 0a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z"
               />
             </svg>
+
             <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
-              <span className="font-semibold">Click to upload</span> or drag and
-              drop
+              <span className="font-semibold">Select</span> Or drag and drop
+              file here
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-400">
-              Only CSV files allowed
-            </p>
+            <b className="text-xs text-gray-500 dark:text-gray-400">
+              (Supported Format : CSV)
+            </b>
           </div>
           <input {...getInputProps()} />
         </div>
